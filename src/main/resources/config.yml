@@ -1,0 +1,166 @@
+##########################################################################
+#                                                                        #
+#                              MonsterSettings                           #
+#                                                                        #
+# Made by: Patstar                                                       #
+# Bug Reports: https://github.com/Patstar97/MonsterSettings/issues       #
+# Source Code: https://github.com/Patstar97/MonsterSettings              #
+##########################################################################
+
+
+##############################################################################################################################
+# List of all monsters that can be configured with their respective configuration subsection (also includes unused monsters) #
+# Newly added Monsters should also be configurable if you use their entity_type as configuration subsection                  #
+#                                                                                                                            #
+#     MONSTER NAME      | CONFIG-SUBSECTION                                                                                  #
+#     Blaze             | blaze                                                                                              #
+#     Bogged            | bogged                                                                                             #
+#     Breeze            | breeze                                                                                             #
+#     Cave Spider       | cave_spider                                                                                        #
+#     Creaking          | creaking                                                                                           #
+#     Creeper           | creeper                                                                                            #
+#     Drowned           | drowned                                                                                            #
+#     Elder Guardian    | elder_guardian                                                                                     #
+#     Ender Dragon      | ender_dragon                                                                                       #
+#     Enderman          | enderman                                                                                           #
+#     Endermite         | endermite                                                                                          #
+#     Evoker            | evoker                                                                                             #
+#     Ghast             | ghast                                                                                              #
+#     Giant             | giant                                                                                              #
+#     Guardian          | guardian                                                                                           #
+#     Hoglin            | hoglin                                                                                             #
+#     Husk              | husk                                                                                               #
+#     Illusioner        | illusioner                                                                                         #
+#     Magma Cube        | magma_cube                                                                                         #
+#     Phantom           | phantom                                                                                            #
+#     Piglin            | piglin                                                                                             #
+#     Piglin Brute      | piglin_brute                                                                                       #
+#     Pillager          | pillager                                                                                           #
+#     Ravager           | ravager                                                                                            #
+#     Shulker           | shulker                                                                                            #
+#     Silverfish        | silverfish                                                                                         #
+#     Skeleton          | skeleton                                                                                           #
+#     Slime             | slime                                                                                              #
+#     Spider            | spider                                                                                             #
+#     Stray             | strider                                                                                            #
+#     Vex               | vex                                                                                                #
+#     Vindicator        | vindicator                                                                                         #
+#     Warden            | warden                                                                                             #
+#     Witch             | witch                                                                                              #
+#     Wither            | wither                                                                                             #
+#     Wither Skeleton   | wither_skeleton                                                                                    #
+#     Zoglin            | zoglin                                                                                             #
+#     Zombie            | zombie                                                                                             #
+#     ZombieVillager    | zombie_villager                                                                                    #
+#     Zombiefied Piglin | zombiefied_piglin                                                                                  #
+#                                                                                                                            #
+#                                                                                                                            #
+#  Configuration options available for every monster:                                                                        #
+#                                                                                                                            #
+#     Config-Name        | Default-Value | Description                                                                      #
+#     trample-crops      | true          | Should this monster be able to trample crops?                                    #
+#     damage-pets        | true          | Should this monster be able to damage tamed pets?                                #
+#     damage-animals     | true          | Should this monster be able to damage animals?                                   #
+#     damage-monsters    | true          | Should this monster be able to damage other monsters?                            #
+#     damage-players     | true          | Should this monster be able to damage other monsters?                            #
+#     disable-aggression | false         | Should this monster be non-hostile?                                              #
+#     disable-spawn      | false         | Should this monster stop spawning?                                               #
+#
+#
+# Some monsters have unique options not available to other monsters:
+#
+#     Option                    | Monsters                        | Default-Value | Description
+#     move-blocks               | enderman                        | true          | Should this monster be able to pick up and place down blocks?
+#     destroy-blocks            | creeper, ender_dragon, ravager  | true          | Should this monster be able to destroy blocks?
+#     projectile-destroy-blocks | ghast, wither                   | true          | Should the projectiles from this monster be able to destroy blocks?
+#     spawn-destroy-blocks      | wither                          | true          | Should this monster be able to destroy blocks when spawning?
+#
+#
+# Example Configuration for Creepers to not be able to destroy blocks or damage tamed mobs:
+#
+#   creeper:
+#     destroy-blocks: false
+#     damage-pets: false
+#
+#
+# List of Animals:
+#   Armadillo
+#   Axolotl
+#   Bee
+#   Camel
+#   Cat
+#   Chicken
+#   Cow
+#   Donkey
+#   Fox
+#   Frog
+#   Goat
+#   Hoglin
+#   Horse
+#   Llama
+#   Mule
+#   Ocelot
+#   Panda
+#   Parrot
+#   Pig
+#   PolarBear
+#   Rabbit
+#   Sheep
+#   Sniffer
+#   Strider
+#   Turtle
+#   Wolf
+#
+##############################################################################################################################
+
+
+# Should monsters be able to trample crops?
+# If false overwrites individual monster configuration
+# Default set to 'true'
+trample-crops: true
+
+# Should monsters be able to damage tamed pets?
+# If false overwrites individual monster configuration
+# Default set to 'true'
+damage-pets: true
+
+# Should monsters be able to damage animals?
+# If false overwrites individual monster configuration
+# Default set to 'true'
+damage-animals: true
+
+# Should monsters be able to damage other monsters?
+# If false overwrites individual monster configuration
+# Default set to 'true'
+damage-monsters: true
+
+# Should monsters be able to damage players?
+# If false overwrites individual monster configuration
+# Default set to 'true'
+damage-players: true
+
+
+creeper:
+  destroy-blocks: true
+
+ender_dragon:
+  destroy-blocks: true
+
+enderman:
+  move-blocks: true
+
+ghast:
+  projectile-destroy-blocks: true
+
+ravager:
+  destroy-blocks: true
+
+wither:
+  spawn-destroy-blocks: true
+  projectile-destroy-blocks: true
+
+
+# You have to reload the plugin configuration OR restart the server after making changes to the config file for it to work!
+# Otherwise, the changes you made won't be implemented into the server.
+# The command for reloading the plugin configuration is '/antimobgrief reload'.
+# Permission: antimobgrief.reload

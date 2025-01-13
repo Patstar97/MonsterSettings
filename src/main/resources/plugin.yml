@@ -1,0 +1,22 @@
+name: MonsterSettings
+version: '1.0'
+main: com.patstar.MonsterSettings.MonsterSettings
+website: https://github.com/Patstar97/MonsterSettings
+api-version: '1.21'
+prefix: MonsterSettingsPlugin
+load: STARTUP
+
+author: Patstar
+description: Provides options to configure monster behaviors in your world.
+
+commands:
+  monstersettings:
+    description: Reloads the configuration file of the MonsterSettings plugin.
+    usage: /monstersettings reload
+    permission: monstersettings.reload
+    permission-message: You don't have <permission>
+
+  permissions:
+    monstersettings.reload:
+      description: Allows the player to reload the MonsterSettings plugin's configuration file.
+      default: op

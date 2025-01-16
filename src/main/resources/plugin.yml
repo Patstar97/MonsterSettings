@@ -1,5 +1,5 @@
 name: MonsterSettings
-version: '1.0'
+version: '1.1'
 main: com.patstar.MonsterSettings.MonsterSettings
 website: https://github.com/Patstar97/MonsterSettings
 api-version: '1.21'

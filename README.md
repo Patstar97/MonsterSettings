@@ -1,5 +1,5 @@
 # <img src="./icon.png" width="25"> [MonsterSettings](https://hangar.papermc.io/Patstar/MonsterSettings)
-A PaperMC plugin for version 1.21.4 that provides options to configure monster behaviors in your world.
+A PaperMC (Bukkit-API based) plugin written for version 1.21.4 that provides options to configure monster behaviors in your world.
 
 # Description
 **MonsterSettings** is a highly customizable plugin that allows configuration of monster behaviour in your world. Every Monster can be configured to your liking. Disable Creeper explosions destroying blocks, prevent Enderman from stealing blocks, protect tamed pets from monsters and much more.
@@ -11,6 +11,8 @@ This plugin is a extremely customizable, perfect for protecting crops or blocks,
 * **Protect Crops**: Shield crops from being trampled by monsters.
 * **Protect Pets**: Protect tamed animals like cats, wolves, horses, llamas, and more from (all or specific) monsters.
 * **Protect Animals**: Prevent animals from taking damage from (all or specific) monsters.
+* **Protect Villagers**: Prevent villagers from taking damage from (all or specific) monsters.
+* **Protect Wandering Traders**: Prevent wandering traders from taking damage from (all or specific) monsters.
 * **Protect Players**: Prevent players from taking damage from (all or specific) monsters.
 * **Harder Difficulty**: Prevent (all or specific) monsters from hurting other monsters.
 * **Witch Potion Protection**: Preventing damage from Witches also prevents effects from their thrown potions.
@@ -22,4 +24,3 @@ This plugin is a extremely customizable, perfect for protecting crops or blocks,
 # Compiling
 The project is written for Java 21 and the build process makes use of Gradle.
 Dependencies are automatically handled by Gradle.
-

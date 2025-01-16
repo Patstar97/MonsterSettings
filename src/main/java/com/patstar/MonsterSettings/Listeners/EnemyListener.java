@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.*;
+import org.bukkit.event.hanging.HangingBreakByEntityEvent;
+import org.bukkit.event.vehicle.VehicleDestroyEvent;
 import org.jetbrains.annotations.NotNull;
 
 public class EnemyListener implements Listener {
@@ -96,7 +98,41 @@ public class EnemyListener implements Listener {
             event.blockList().clear();
             return;
         }
+    }
 
+    // Counterpart to onEntityExplode
+    @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+    public void onHangingBreakByEntity(HangingBreakByEntityEvent event) {
+        if(event.getRemover().getType() == EntityType.CREEPER && !plugin.getConfigForSubsection("creeper", "destroy-blocks", true)) {
+            event.setCancelled(true);
+            return;
+        }
+
+        if(event.getRemover().getType() == EntityType.FIREBALL && !plugin.getConfigForSubsection("ghast", "projectile-destroy-blocks", true)) {
+            Projectile fireball = (Projectile) event.getRemover();
+            if (fireball.getShooter() instanceof Ghast) {
+                event.setCancelled(true);
+                return;
+            }
+        }
+
+        if(event.getRemover().getType() == EntityType.WITHER_SKULL && !plugin.getConfigForSubsection("wither", "projectile-destroy-blocks", true)) {
+            Projectile wither_skull = (Projectile) event.getRemover();
+            if (wither_skull.getShooter() instanceof Wither) {
+                event.setCancelled(true);
+                return;
+            }
+        }
+
+        if(event.getRemover().getType() == EntityType.WITHER && !plugin.getConfigForSubsection("wither", "spawn-destroy-blocks", true)) {
+            event.setCancelled(true);
+            return;
+        }
+
+        if(event.getRemover().getType() == EntityType.ENDER_DRAGON && !plugin.getConfigForSubsection("ender_dragon", "destroy-blocks", true)) {
+            event.setCancelled(true);
+            return;
+        }
     }
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)

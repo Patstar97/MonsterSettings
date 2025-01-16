@@ -8,110 +8,112 @@
 ##########################################################################
 
 
-##############################################################################################################################
-# List of all monsters that can be configured with their respective configuration subsection (also includes unused monsters) #
-# Newly added Monsters should also be configurable if you use their entity_type as configuration subsection                  #
-#                                                                                                                            #
-#     MONSTER NAME      | CONFIG-SUBSECTION                                                                                  #
-#     Blaze             | blaze                                                                                              #
-#     Bogged            | bogged                                                                                             #
-#     Breeze            | breeze                                                                                             #
-#     Cave Spider       | cave_spider                                                                                        #
-#     Creaking          | creaking                                                                                           #
-#     Creeper           | creeper                                                                                            #
-#     Drowned           | drowned                                                                                            #
-#     Elder Guardian    | elder_guardian                                                                                     #
-#     Ender Dragon      | ender_dragon                                                                                       #
-#     Enderman          | enderman                                                                                           #
-#     Endermite         | endermite                                                                                          #
-#     Evoker            | evoker                                                                                             #
-#     Ghast             | ghast                                                                                              #
-#     Giant             | giant                                                                                              #
-#     Guardian          | guardian                                                                                           #
-#     Hoglin            | hoglin                                                                                             #
-#     Husk              | husk                                                                                               #
-#     Illusioner        | illusioner                                                                                         #
-#     Magma Cube        | magma_cube                                                                                         #
-#     Phantom           | phantom                                                                                            #
-#     Piglin            | piglin                                                                                             #
-#     Piglin Brute      | piglin_brute                                                                                       #
-#     Pillager          | pillager                                                                                           #
-#     Ravager           | ravager                                                                                            #
-#     Shulker           | shulker                                                                                            #
-#     Silverfish        | silverfish                                                                                         #
-#     Skeleton          | skeleton                                                                                           #
-#     Slime             | slime                                                                                              #
-#     Spider            | spider                                                                                             #
-#     Stray             | strider                                                                                            #
-#     Vex               | vex                                                                                                #
-#     Vindicator        | vindicator                                                                                         #
-#     Warden            | warden                                                                                             #
-#     Witch             | witch                                                                                              #
-#     Wither            | wither                                                                                             #
-#     Wither Skeleton   | wither_skeleton                                                                                    #
-#     Zoglin            | zoglin                                                                                             #
-#     Zombie            | zombie                                                                                             #
-#     ZombieVillager    | zombie_villager                                                                                    #
-#     Zombiefied Piglin | zombiefied_piglin                                                                                  #
-#                                                                                                                            #
-#                                                                                                                            #
-#  Configuration options available for every monster:                                                                        #
-#                                                                                                                            #
-#     Config-Name        | Default-Value | Description                                                                      #
-#     trample-crops      | true          | Should this monster be able to trample crops?                                    #
-#     damage-pets        | true          | Should this monster be able to damage tamed pets?                                #
-#     damage-animals     | true          | Should this monster be able to damage animals?                                   #
-#     damage-monsters    | true          | Should this monster be able to damage other monsters?                            #
-#     damage-players     | true          | Should this monster be able to damage other monsters?                            #
-#     disable-aggression | false         | Should this monster be non-hostile?                                              #
-#     disable-spawn      | false         | Should this monster stop spawning?                                               #
-#
-#
-# Some monsters have unique options not available to other monsters:
-#
-#     Option                    | Monsters                        | Default-Value | Description
-#     move-blocks               | enderman                        | true          | Should this monster be able to pick up and place down blocks?
-#     destroy-blocks            | creeper, ender_dragon, ravager  | true          | Should this monster be able to destroy blocks?
-#     projectile-destroy-blocks | ghast, wither                   | true          | Should the projectiles from this monster be able to destroy blocks?
-#     spawn-destroy-blocks      | wither                          | true          | Should this monster be able to destroy blocks when spawning?
-#
-#
-# Example Configuration for Creepers to not be able to destroy blocks or damage tamed mobs:
-#
-#   creeper:
-#     destroy-blocks: false
-#     damage-pets: false
-#
-#
-# List of Animals:
-#   Armadillo
-#   Axolotl
-#   Bee
-#   Camel
-#   Cat
-#   Chicken
-#   Cow
-#   Donkey
-#   Fox
-#   Frog
-#   Goat
-#   Hoglin
-#   Horse
-#   Llama
-#   Mule
-#   Ocelot
-#   Panda
-#   Parrot
-#   Pig
-#   PolarBear
-#   Rabbit
-#   Sheep
-#   Sniffer
-#   Strider
-#   Turtle
-#   Wolf
-#
-##############################################################################################################################
+#########################################################################################################################################################
+# List of all monsters that can be configured with their respective configuration subsection (also includes unused monsters)                            #
+# Newly added Monsters should also be configurable if you use their entity_type as configuration subsection                                             #
+#                                                                                                                                                       #
+#     MONSTER NAME      | CONFIG-SUBSECTION                                                                                                             #
+#     Blaze             | blaze                                                                                                                         #
+#     Bogged            | bogged                                                                                                                        #
+#     Breeze            | breeze                                                                                                                        #
+#     Cave Spider       | cave_spider                                                                                                                   #
+#     Creaking          | creaking                                                                                                                      #
+#     Creeper           | creeper                                                                                                                       #
+#     Drowned           | drowned                                                                                                                       #
+#     Elder Guardian    | elder_guardian                                                                                                                #
+#     Ender Dragon      | ender_dragon                                                                                                                  #
+#     Enderman          | enderman                                                                                                                      #
+#     Endermite         | endermite                                                                                                                     #
+#     Evoker            | evoker                                                                                                                        #
+#     Ghast             | ghast                                                                                                                         #
+#     Giant             | giant                                                                                                                         #
+#     Guardian          | guardian                                                                                                                      #
+#     Hoglin            | hoglin                                                                                                                        #
+#     Husk              | husk                                                                                                                          #
+#     Illusioner        | illusioner                                                                                                                    #
+#     Magma Cube        | magma_cube                                                                                                                    #
+#     Phantom           | phantom                                                                                                                       #
+#     Piglin            | piglin                                                                                                                        #
+#     Piglin Brute      | piglin_brute                                                                                                                  #
+#     Pillager          | pillager                                                                                                                      #
+#     Ravager           | ravager                                                                                                                       #
+#     Shulker           | shulker                                                                                                                       #
+#     Silverfish        | silverfish                                                                                                                    #
+#     Skeleton          | skeleton                                                                                                                      #
+#     Slime             | slime                                                                                                                         #
+#     Spider            | spider                                                                                                                        #
+#     Stray             | strider                                                                                                                       #
+#     Vex               | vex                                                                                                                           #
+#     Vindicator        | vindicator                                                                                                                    #
+#     Warden            | warden                                                                                                                        #
+#     Witch             | witch                                                                                                                         #
+#     Wither            | wither                                                                                                                        #
+#     Wither Skeleton   | wither_skeleton                                                                                                               #
+#     Zoglin            | zoglin                                                                                                                        #
+#     Zombie            | zombie                                                                                                                        #
+#     ZombieVillager    | zombie_villager                                                                                                               #
+#     Zombiefied Piglin | zombiefied_piglin                                                                                                             #
+#                                                                                                                                                       #
+#                                                                                                                                                       #
+#  Configuration options available for every monster:                                                                                                   #
+#                                                                                                                                                       #
+#     Config-Name        | Default-Value | Description                                                                                                  #
+#     trample-crops      | true          | Should this monster be able to trample crops?                                                                #
+#     damage-pets        | true          | Should this monster be able to damage tamed pets?                                                            #
+#     damage-animals     | true          | Should this monster be able to damage animals?                                                               #
+#     damage-villagers   | true          | Should this monster be able to damage villagers?                                                             #
+#     damage-traders     | true          | Should this monster be able to damage wandering traders?                                                     #
+#     damage-monsters    | true          | Should this monster be able to damage other monsters?                                                        #
+#     damage-players     | true          | Should this monster be able to damage other monsters?                                                        #
+#     disable-aggression | false         | Should this monster be non-hostile?                                                                          #
+#     disable-spawn      | false         | Should this monster stop spawning?                                                                           #
+#                                                                                                                                                       #
+#                                                                                                                                                       #
+# Some monsters have unique options not available to other monsters:                                                                                    #
+#                                                                                                                                                       #
+#     Option                    | Monsters                        | Default-Value | Description                                                         #
+#     move-blocks               | enderman                        | true          | Should this monster be able to pick up and place down blocks?       #
+#     destroy-blocks            | creeper, ender_dragon, ravager  | true          | Should this monster be able to destroy blocks?                      #
+#     projectile-destroy-blocks | ghast, wither                   | true          | Should the projectiles from this monster be able to destroy blocks? #
+#     spawn-destroy-blocks      | wither                          | true          | Should this monster be able to destroy blocks when spawning?        #
+#                                                                                                                                                       #
+#                                                                                                                                                       #
+# Example Configuration for Creepers to not be able to destroy blocks or damage tamed mobs:                                                             #
+#                                                                                                                                                       #
+#   creeper:                                                                                                                                            #
+#     destroy-blocks: false                                                                                                                             #
+#     damage-pets: false                                                                                                                                #
+#                                                                                                                                                       #
+#                                                                                                                                                       #
+# List of Vanilla Animals:                                                                                                                              #
+#   Armadillo                                                                                                                                           #
+#   Axolotl                                                                                                                                             #
+#   Bee                                                                                                                                                 #
+#   Camel                                                                                                                                               #
+#   Cat                                                                                                                                                 #
+#   Chicken                                                                                                                                             #
+#   Cow                                                                                                                                                 #
+#   Donkey                                                                                                                                              #
+#   Fox                                                                                                                                                 #
+#   Frog                                                                                                                                                #
+#   Goat                                                                                                                                                #
+#   Hoglin                                                                                                                                              #
+#   Horse                                                                                                                                               #
+#   Llama                                                                                                                                               #
+#   Mule                                                                                                                                                #
+#   Ocelot                                                                                                                                              #
+#   Panda                                                                                                                                               #
+#   Parrot                                                                                                                                              #
+#   Pig                                                                                                                                                 #
+#   PolarBear                                                                                                                                           #
+#   Rabbit                                                                                                                                              #
+#   Sheep                                                                                                                                               #
+#   Sniffer                                                                                                                                             #
+#   Strider                                                                                                                                             #
+#   Turtle                                                                                                                                              #
+#   Wolf                                                                                                                                                #
+#                                                                                                                                                       #
+#########################################################################################################################################################
 
 
 # Should monsters be able to trample crops?
@@ -128,6 +130,16 @@ damage-pets: true
 # If false overwrites individual monster configuration
 # Default set to 'true'
 damage-animals: true
+
+# Should monsters be able to damage villagers?
+# If false overwrites individual monster configuration
+# Default set to 'true'
+damage-villagers: true
+
+# Should monsters be able to damage wandering traders?
+# If false overwrites individual monster configuration
+# Default set to 'true'
+damage-traders: true
 
 # Should monsters be able to damage other monsters?
 # If false overwrites individual monster configuration

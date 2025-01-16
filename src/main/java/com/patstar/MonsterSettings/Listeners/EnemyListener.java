@@ -25,6 +25,12 @@ public class EnemyListener implements Listener {
         if (!config.getBoolean("damage-animals", true) && target instanceof Animals) {
             return true;
         }
+        if (!config.getBoolean("damage-villagers", true) && target instanceof Villager) {
+            return true;
+        }
+        if (!config.getBoolean("damage-traders", true) && target instanceof WanderingTrader) {
+            return true;
+        }
         if (!config.getBoolean("damage-monsters", true) && target instanceof Enemy) {
             return true;
         }

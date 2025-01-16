@@ -37,12 +37,12 @@ public class EnemyListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onEntityChangeBlock(EntityChangeBlockEvent event) {
-        if(event.getEntityType() == EntityType.ENDERMAN && !plugin.getConfigForEnemy(event.getEntity(), "block-interaction", true)) {
+        if(event.getEntityType() == EntityType.ENDERMAN && !plugin.getConfigForSubsection("enderman", "block-interaction", true)) {
             event.setCancelled(true);
             return;
         }
 
-        if(event.getEntityType() == EntityType.RAVAGER && !plugin.getConfigForEnemy(event.getEntity(), "destroy-blocks", true)) {
+        if(event.getEntityType() == EntityType.RAVAGER && !plugin.getConfigForSubsection("ravager", "destroy-blocks", true)) {
             event.setCancelled(true);
             return;
         }
@@ -60,7 +60,7 @@ public class EnemyListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onEntityExplode(EntityExplodeEvent event) {
-        if(event.getEntityType() == EntityType.CREEPER && !plugin.getConfigForEnemy(event.getEntity(), "destroy-blocks", true)) {
+        if(event.getEntityType() == EntityType.CREEPER && !plugin.getConfigForSubsection("creeper", "destroy-blocks", true)) {
             event.blockList().clear();
             return;
         }
@@ -81,12 +81,12 @@ public class EnemyListener implements Listener {
             }
         }
 
-        if(event.getEntityType() == EntityType.WITHER && !plugin.getConfigForEnemy(event.getEntity(), "spawn-destroy-blocks", true)) {
+        if(event.getEntityType() == EntityType.WITHER && !plugin.getConfigForSubsection("wither", "spawn-destroy-blocks", true)) {
             event.blockList().clear();
             return;
         }
 
-        if(event.getEntityType() == EntityType.ENDER_DRAGON && !plugin.getConfigForEnemy(event.getEntity(), "destroy-blocks", true)) {
+        if(event.getEntityType() == EntityType.ENDER_DRAGON && !plugin.getConfigForSubsection("ender_dragon", "destroy-blocks", true)) {
             event.blockList().clear();
             return;
         }
@@ -120,6 +120,11 @@ public class EnemyListener implements Listener {
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onEntityTarget(EntityTargetEvent event) {
         if (plugin.getConfigForEnemy(event.getEntity(), "disable-aggression", false)) {
+            event.setCancelled(true);
+            return;
+        }
+        ConfigurationSection subconfig = plugin.getConfigSectionForEnemy(event.getEntity());
+        if (event.getTarget() != null && subconfig != null && preventDamage(subconfig, event.getTarget())) {
             event.setCancelled(true);
             return;
         }

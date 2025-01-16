@@ -1,4 +1,4 @@
-# <img src="./icon.png" width="25"> [MonsterSettings](https://hangar.papermc.io/Patstar/MonsterSettings)
+# <img src="./icon.png" width="25"> [MonsterSettings](https://hangar.papermc.io/Patstar/MonsterSettings) ([bStats](https://bstats.org/editPlugin/bukkit/MonsterSettings))
 A PaperMC (Bukkit-API based) plugin written for version 1.21.4 that provides options to configure monster behaviors in your world.
 
 # Description
